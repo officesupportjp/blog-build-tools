@@ -1,0 +1,15 @@
+version: '3'
+services:
+  blogtool:
+    build: ./blogtool
+    container_name: blogtool
+    environment:
+      - GIT_REPO=${GIT_REPO}
+      - GIT_USERNAME=${GIT_USERNAME}
+      - GIT_EMAIL=${GIT_EMAIL}
+    ports:
+      - "4000:4000"
+    # tty container -> host    output
+    # stdin_opne host -> container    input
+    tty: true
+    stdin_open: true
