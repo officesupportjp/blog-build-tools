@@ -1,10 +1,9 @@
 version: '3'
 services:
-  blogtool:
-    build: ./blogtool
-    container_name: blogtool
+  blogtools:
+    build: ./blogtools
+    container_name: blogtools
     environment:
-      - GIT_REPO=${GIT_REPO}
       - GIT_USERNAME=${GIT_USERNAME}
       - GIT_EMAIL=${GIT_EMAIL}
     ports:

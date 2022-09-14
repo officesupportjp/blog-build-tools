@@ -13,6 +13,6 @@ RUN set -ex\
 
 # set -ex コマンドの実行に失敗したらその場で終了する
 RUN set -ex\
-    && git clone "${GIT_REPO}"\
+    && git clone https://github.com/officesupportjp/blog\
     && cd blog\
     && npm install
